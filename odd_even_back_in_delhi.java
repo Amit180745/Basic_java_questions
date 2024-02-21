@@ -4,30 +4,32 @@ public class odd_even_back_in_delhi {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+        Scanner s = new Scanner(System.in);
+        int numOfCars = s.nextInt();
+        s.nextLine(); // Consume newline left-over
 
-		Scanner scanner = new Scanner(System.in);
-		int n = scanner.nextInt();
-		while (n < n-- ) {
-			int t = scanner.nextInt();
-			n--;
-		int sum1 = 0, sum2 = 0;
-		while (t > n) {
-			int remain = t % 10;
-			if (remain % 2 == 0) {
-				sum1 += remain;
-			} else {
-				sum2 += remain;
-			}
-			t /= 10;
-		}
+        for (int i = 0; i < numOfCars; i++) {
+            String carNumber = s.nextLine();
+            int sumOfEvenDigits = 0;
+            int sumOfOddDigits = 0;
 
-		if (sum1 % 4 == 0 || sum2 % 3 == 0) {
-			System.out.println("Yes");
-		} else {
-			System.out.println("No");
-		}
-		}
+            for (char digit : carNumber.toCharArray()) {
+                int number = Character.getNumericValue(digit);
+                if (number % 2 == 0) {
+                    sumOfEvenDigits += number;
+                } else {
+                    sumOfOddDigits += number;
+                }
+            }
+
+            if (sumOfEvenDigits % 4 == 0 || sumOfOddDigits % 3 == 0) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+        }
 
 	}
+
 }
 
