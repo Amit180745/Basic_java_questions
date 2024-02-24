@@ -5,8 +5,8 @@ public class Is_armstrong_number {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub}
 		Scanner s = new Scanner(System.in);
-		int x = s.nextInt();
-		System.out.println(isArmstrong(x));
+		int n = s.nextInt();
+		System.out.println(isArmstrong(n));
 	}
 	// Function to calculate the sum of digits raised to the power of their count
 	public static int calculateSum(int num) {
